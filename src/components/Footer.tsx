@@ -30,7 +30,7 @@ const Footer = () => (
         {/* Brand */}
         <div className="lg:col-span-2">
           <Link href="/" className="flex items-center gap-2 mb-4">
-            <Image src={logo} alt="MyPetBook" width={56} height={56} className="rounded-lg" />
+            <Image src={logo} alt="MyPetBook" width={100} height={100} className="rounded-lg" />
             <span className="font-heading font-bold text-xl">MyPetBook</span>
           </Link>
           <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">

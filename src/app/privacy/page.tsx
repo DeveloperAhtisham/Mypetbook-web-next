@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Layout from "@/components/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -9,7 +8,6 @@ export const metadata: Metadata = {
 
   const PrivacyPage = () => {
   return (
-    <Layout>
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -28,8 +26,7 @@ export const metadata: Metadata = {
         </div>
       </section>
     </div>
-    </Layout>
-    );
+  );
 };
 
 export default PrivacyPage;

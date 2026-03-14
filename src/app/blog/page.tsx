@@ -9,7 +9,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "Blog",
@@ -112,7 +111,6 @@ const BlogPage = () => {
   const regularPosts = blogPosts.filter((post) => !post.featured);
 
   return (
-    <Layout>
     <div>
 
       {/* Hero Section */}
@@ -344,7 +342,6 @@ const BlogPage = () => {
         </div>
       </section>
     </div>
-    </Layout>
   );
 };
 

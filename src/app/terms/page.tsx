@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Layout from "@/components/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -8,7 +7,6 @@ export const metadata: Metadata = {
 
 const TermsPage = () => {
   return (
-    <Layout>
     <div>
         <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -26,7 +24,6 @@ const TermsPage = () => {
         </div>
       </section>
     </div>
-    </Layout>
   );
 };
 

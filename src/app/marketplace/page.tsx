@@ -4,8 +4,6 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import Link from "next/link";
 import { Star, ShoppingCart, ArrowRight, Store } from "lucide-react";
 import { useState } from "react";
-import Layout from "@/components/Layout";
-
 const categories = ["All", "Food & Treats", "Accessories", "Toys", "Grooming", "Health", "Apparel"];
 
 const products = [
@@ -32,7 +30,6 @@ const MarketplacePage = () => {
   const filtered = activeCategory === "All" ? products : products.filter((p) => p.category === activeCategory);
 
   return (
-    <Layout>
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -149,8 +146,7 @@ const MarketplacePage = () => {
         </div>
       </section>
     </div>
-    </Layout>
-    );
+  );
 };
 
 export default MarketplacePage;

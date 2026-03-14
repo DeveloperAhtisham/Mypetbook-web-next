@@ -6,8 +6,6 @@ import {
   Package, ClipboardList, Percent, BarChart3, Megaphone, Star,
   ArrowRight, Check
 } from "lucide-react";
-import Layout from "@/components/Layout";
-
 const benefits = [
   { icon: Package, title: "Product Listings", desc: "Showcase your entire inventory with beautiful product cards, categories, and detailed descriptions." },
   { icon: ClipboardList, title: "Order Management", desc: "Track orders from placement to delivery. Manage inventory levels and get low-stock alerts." },
@@ -25,7 +23,6 @@ const plans = [
 
 const ForPetShopsPage = () => {
   return (
-    <Layout> 
   <div>
     <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -117,7 +114,6 @@ const ForPetShopsPage = () => {
       </div>
     </section>
   </div>
-  </Layout>
   );
 };
 

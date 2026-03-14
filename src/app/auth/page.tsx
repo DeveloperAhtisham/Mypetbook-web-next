@@ -140,8 +140,6 @@ function AuthContent() {
         </div>
       </div>
     </div>
-    </div>
-    </Layout>
   );
 }
 

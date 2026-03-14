@@ -7,7 +7,6 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
-import Layout from "@/components/Layout";
 
 function AuthContent() {
   const searchParams = useSearchParams();
@@ -23,7 +22,6 @@ function AuthContent() {
   };
 
   return (
-    <Layout>  <div>
     <div className="min-h-screen flex">
       {/* Form Side */}
       <div className="flex-1 flex items-center justify-center p-6 md:p-12">
@@ -142,19 +140,15 @@ function AuthContent() {
         </div>
       </div>
     </div>
-    </div>
-    </Layout>
   );
 }
 
 export default function AuthPage() {
   return (
     <Suspense fallback={
-      <Layout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-pulse text-muted-foreground">Loading...</div>
-        </div>
-      </Layout>
+      <div className="min-h-screen flex items-center justify-center bg-muted/30">
+        <div className="animate-pulse text-muted-foreground">Loading...</div>
+      </div>
     }>
       <AuthContent />
     </Suspense>

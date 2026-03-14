@@ -4,8 +4,6 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import Link from "next/link";
 import { Star, ShoppingCart, ArrowRight, Store } from "lucide-react";
 import { useState } from "react";
-import Layout from "@/components/Layout";
-
 const categories = ["All", "Food & Treats", "Accessories", "Toys", "Grooming", "Health", "Apparel"];
 
 const products = [
@@ -149,8 +147,7 @@ const MarketplacePage = () => {
         </div>
       </section>
     </div>
-    </Layout>
-    );
+  );
 };
 
 export default MarketplacePage;

@@ -16,7 +16,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import Layout from "@/components/Layout";
 
 const vets = [
   {
@@ -125,7 +124,6 @@ const DirectoryPage = () => {
   const currentData = activeTab === "vets" ? vets : shops;
 
   return (
-    <Layout>
     <div>
 
       {/* Hero Section */}
@@ -394,7 +392,6 @@ const DirectoryPage = () => {
         </div>
       </section>
     </div>
-    </Layout>
   );
 };
 

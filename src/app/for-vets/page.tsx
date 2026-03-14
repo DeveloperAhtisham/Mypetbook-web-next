@@ -6,8 +6,6 @@ import {
   LayoutDashboard, CalendarCheck, Video, BookOpen, Star, FileText,
   ArrowRight, Check
 } from "lucide-react";
-import Layout from "@/components/Layout";
-
 const benefits = [
   { icon: LayoutDashboard, title: "Professional Dashboard", desc: "Manage your entire practice from one clean, intuitive dashboard with patient overview, analytics, and scheduling." },
   { icon: CalendarCheck, title: "Appointment Management", desc: "Accept bookings, set availability, send reminders, and reduce no-shows with our smart scheduling system." },
@@ -153,7 +151,6 @@ const ForVetsPage = () => {
       </div>
     </section>
   </div>
-  </Layout>
   );
 }
 

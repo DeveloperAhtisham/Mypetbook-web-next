@@ -37,7 +37,6 @@ const PricingPage = () => {
   const plans = tab === "owners" ? ownerPlans : tab === "vets" ? vetPlans : shopPlans;
 
   return (
-    <Layout> 
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -129,8 +128,7 @@ const PricingPage = () => {
         </div>
       </section>
     </div>
-    </Layout>
-    );
+  );
 }; 
 
 export default PricingPage;

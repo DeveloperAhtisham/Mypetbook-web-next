@@ -3,8 +3,6 @@ import {
   HeartPulse, ShieldCheck, Apple, TrendingUp, BotMessageSquare, CalendarHeart,
   Stethoscope, Newspaper, Store, Wallet
 } from "lucide-react";
-import Layout from "@/components/Layout";
-
 export const metadata = {
   title: "Features",
   description: "Discover all the amazing features that make MyPetBook the ultimate companion for pet owners, veterinarians, and pet businesses.",
@@ -172,7 +170,6 @@ const FeaturesPage = () => {
         </div>
       </section>
     </div>
-    </Layout>
   );
 };
 

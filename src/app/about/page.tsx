@@ -5,7 +5,6 @@ export const metadata = {
   description: "Learn about MyPetBook – our mission to connect pet owners, veterinarians, and pet businesses.",
 };
 import { Heart, Shield, Globe, Sparkles, Linkedin, Twitter } from "lucide-react";
-import Layout from "@/components/Layout";
 
   const values = [
   { icon: Heart, title: "Pet-First Philosophy", desc: "Every decision we make starts with one question: Is this good for pets and the people who love them?" },
@@ -31,7 +30,6 @@ const timeline = [
 
 const AboutPage = () => {
   return (
-    <Layout>
   <div>
     <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4 text-center relative z-10">
@@ -147,7 +145,6 @@ const AboutPage = () => {
         </div>
       </section>
     </div>
-  </Layout>
   );
 }
 

@@ -9,8 +9,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "Blog",
@@ -108,13 +107,13 @@ const categories = [
   { name: "Preventive Care", count: 2, active: false },
 ];
 
-export default function BlogPage() {
+const BlogPage = () => {
   const featuredPost = blogPosts.find((post) => post.featured);
   const regularPosts = blogPosts.filter((post) => !post.featured);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <Layout>
+    <div>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-r from-secondary to-muted relative overflow-hidden">
@@ -344,8 +343,9 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
+    </Layout>
   );
-}
+};
+
+export default BlogPage;

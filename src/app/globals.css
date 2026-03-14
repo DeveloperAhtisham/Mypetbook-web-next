@@ -9,30 +9,30 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* MyPetBook Theme Colors */
-    --background: 0 0% 100%;
-    --foreground: 200 50% 15%;
+    --background: 210 50% 98%;
+    --foreground: 210 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 50% 15%;
+    --card-foreground: 210 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 50% 15%;
+    --popover-foreground: 210 40% 15%;
 
-    /* Primary: Theme color #1E4262 */
-    --primary: 200 50% 25%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary: Theme color from my-pet-book */
+    --primary: 207 53% 25%;
+    --primary-foreground: 210 50% 98%;
     --primary-light: 200 50% 35%;
     --primary-lighter: 200 30% 85%;
 
-    /* Secondary: Warm pet-friendly colors */
-    --secondary: 35 70% 92%;
-    --secondary-foreground: 200 50% 25%;
+    /* Secondary */
+    --secondary: 174 42% 39%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 35 30% 96%;
-    --muted-foreground: 200 20% 45%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 320 40% 88%;
-    --accent-foreground: 200 50% 25%;
+    --accent: 42 74% 66%;
+    --accent-foreground: 210 40% 15%;
 
     /* Pet-themed colors */
     --pet-orange: 25 85% 60%;
@@ -40,16 +40,20 @@ All colors MUST be HSL.
     --pet-green: 140 50% 55%;
     --pet-purple: 270 60% 70%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 16 74% 49%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 200 20% 90%;
-    --input: 200 20% 90%;
-    --ring: 200 50% 25%;
+    /* Coral from my-pet-book */
+    --coral: 16 74% 49%;
+    --coral-foreground: 0 0% 100%;
 
-    --radius: 1rem;
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 207 53% 25%;
 
-    /* Hero & UI (pixel-perfect match to old app) */
+    --radius: 0.75rem;
+
+    /* Hero & UI */
     --hero-bg: 194 47% 33%;
     --phone-card: 30 35% 88%;
 
@@ -232,5 +236,34 @@ All colors MUST be HSL.
   .paw-trail::before {
     content: '🐾 🐾 🐾';
     @apply absolute -top-4 left-1/2 transform -translate-x-1/2 text-xs opacity-10 whitespace-nowrap;
+  }
+
+  /* my-pet-book design system */
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+  .glass-dark {
+    @apply bg-primary/80 backdrop-blur-xl border border-white/10;
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(207 53% 25%) 0%, hsl(210 50% 22%) 100%);
+  }
+  .gradient-hero-light {
+    background: linear-gradient(135deg, hsl(207 53% 25%) 0%, hsl(207 50% 35%) 100%);
+  }
+  .btn-coral {
+    @apply bg-coral text-coral-foreground rounded-full px-6 py-3 font-heading font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-coral/25;
+  }
+  .btn-outline-white {
+    @apply border-2 border-white text-white rounded-full px-6 py-3 font-heading font-bold transition-all duration-300 hover:bg-white hover:text-primary hover:scale-105;
+  }
+  .btn-outline-primary {
+    @apply border-2 border-primary text-primary rounded-full px-6 py-3 font-heading font-bold transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105;
+  }
+  .card-float {
+    @apply bg-card rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+  }
+  .section-padding {
+    @apply py-20 md:py-28 px-4;
   }
 }

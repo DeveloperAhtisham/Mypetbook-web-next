@@ -1,27 +1,33 @@
 import type { Metadata } from "next";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-
+import Layout from "@/components/Layout";
+import { ScrollReveal } from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "MyPetBook terms of service and usage guidelines.",
 };
 
-export default function TermsPage() {
+const TermsPage = () => {
   return (
-    <>
-      <Navigation />
-      <main className="min-h-screen pt-16">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            Terms of Service
-          </h1>
-          <p className="text-muted-foreground">
-            Please read these terms of service carefully before using MyPetBook.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </>
+    <Layout>
+    <div>
+        <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <ScrollReveal>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6 border border-white/10">
+              Terms of Service
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-4">
+              Terms of Service
+            </h1>
+            <p className="text-white/70 max-w-2xl mx-auto text-lg">
+              Please read these terms of service carefully before using MyPetBook.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
+    </Layout>
   );
-}
+};
+
+export default TermsPage;

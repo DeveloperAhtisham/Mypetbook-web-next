@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
-import { Toaster } from "@/components/ui/sonner";
+import ConditionalLayout from "@/components/ConditionalLayout";
+
+const Toaster = dynamic(
+  () => import("@/components/ui/sonner").then((m) => ({ default: m.Toaster })),
+  { ssr: false }
+);
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -52,7 +58,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${nunito.variable} font-nunito antialiased`}>
         <Providers>
-          {children}
+          <ConditionalLayout>{children}</ConditionalLayout>
           <Toaster />
         </Providers>
       </body>

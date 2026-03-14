@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src={logo} alt="MyPetBook" width={56} height={56} className="rounded-lg" />
+          <Image src={logo} alt="MyPetBook" width={60} height={60} className="rounded-lg" />
           <span className={`font-heading font-bold text-xl ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
             MyPetBook
           </span>

@@ -3,7 +3,6 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Check, Shield, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import Layout from "@/components/Layout";
 
 const ownerPlans = [
   { name: "Free", price: "$0", period: "/month", desc: "Perfect for getting started", features: ["1 pet profile", "Basic health tracking", "Community access", "Marketplace browsing", "Basic vet search"], cta: "Get Started Free", highlight: false },

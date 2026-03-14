@@ -111,7 +111,6 @@ const BlogPage = () => {
   const regularPosts = blogPosts.filter((post) => !post.featured);
 
   return (
-    <Layout>
     <div>
 
       {/* Hero Section */}

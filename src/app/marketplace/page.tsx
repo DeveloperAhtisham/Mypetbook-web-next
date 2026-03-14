@@ -30,7 +30,6 @@ const MarketplacePage = () => {
   const filtered = activeCategory === "All" ? products : products.filter((p) => p.category === activeCategory);
 
   return (
-    <Layout>
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">

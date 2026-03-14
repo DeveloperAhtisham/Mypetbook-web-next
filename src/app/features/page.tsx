@@ -103,7 +103,6 @@ export const metadata = {
 
 const FeaturesPage = () => {
   return (
-    <Layout> 
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">

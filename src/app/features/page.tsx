@@ -1,229 +1,179 @@
-import Image from "next/image";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import {
-  User,
-  Calendar,
-  Heart,
-  Users,
-  ShoppingBag,
-  MapPin,
-  Settings,
-  Smartphone,
+  HeartPulse, ShieldCheck, Apple, TrendingUp, BotMessageSquare, CalendarHeart,
+  Stethoscope, Newspaper, Store, Wallet
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import phoneMockup from "@/assets/phone-mockup.jpg";
+import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "Features",
-  description:
-    "Discover all the amazing features that make MyPetBook the ultimate companion for pet owners, veterinarians, and pet businesses.",
+  description: "Discover all the amazing features that make MyPetBook the ultimate companion for pet owners, veterinarians, and pet businesses.",
 };
 
-export default function FeaturesPage() {
   const features = [
     {
-      icon: User,
+    icon: HeartPulse,
       title: "Pet Profile Management",
-      description:
-        "Create detailed profiles for your pets with photos, medical history, and important information.",
-      color: "text-pet-orange",
-      bgColor: "bg-pet-orange/10",
-    },
-    {
-      icon: Calendar,
-      title: "Appointment Booking",
-      description:
-        "Schedule vet appointments, grooming sessions, and other pet services with ease.",
-      color: "text-pet-blue",
-      bgColor: "bg-pet-blue/10",
-    },
-    {
-      icon: Heart,
-      title: "Health Tracker",
-      description:
-        "Monitor your pet's health, vaccinations, medications, and wellness milestones.",
-      color: "text-pet-green",
-      bgColor: "bg-pet-green/10",
-    },
-    {
-      icon: Users,
-      title: "Community Feed",
-      description:
-        "Share photos, stories, and connect with other pet owners in your local community.",
-      color: "text-pet-purple",
-      bgColor: "bg-pet-purple/10",
-    },
-    {
-      icon: ShoppingBag,
-      title: "Pet Marketplace",
-      description:
-        "Discover and purchase pet products, food, toys, and accessories from verified sellers.",
-      color: "text-pet-orange",
-      bgColor: "bg-pet-orange/10",
-    },
-    {
-      icon: MapPin,
-      title: "Vet & Shop Directory",
-      description:
-        "Find nearby veterinarians, pet stores, and pet services with reviews and ratings.",
-      color: "text-pet-blue",
-      bgColor: "bg-pet-blue/10",
-    },
-    {
-      icon: Settings,
-      title: "Admin Panel",
-      description:
-        "Comprehensive management tools for veterinarians and shop owners to manage their services.",
-      color: "text-pet-green",
-      bgColor: "bg-pet-green/10",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile-First Design",
-      description:
-        "Beautiful, intuitive mobile app designed specifically for on-the-go pet care management.",
-      color: "text-pet-purple",
-      bgColor: "bg-pet-purple/10",
-    },
-  ];
+    desc: "Create rich profiles for each of your pets with photos, breed info, age, weight, and complete medical history. Everything about your furry friend in one place.",
+    gradient: "from-secondary/20 to-secondary/5",
+    iconBg: "bg-secondary/15 text-secondary",
+    border: "border-secondary/20",
+    tag: "Core",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Vaccination & Health Records",
+    desc: "Keep a detailed timeline of all vaccinations, treatments, and checkups. Get automated reminders so you never miss an important date.",
+    gradient: "from-coral/20 to-coral/5",
+    iconBg: "bg-coral/15 text-coral",
+    border: "border-coral/20",
+    tag: "Health",
+  },
+  {
+    icon: Apple,
+    title: "Diet & Activity Plans",
+    desc: "Create customized diet plans based on breed, age, and health conditions. Track daily activity levels and set fitness goals for your pet.",
+    gradient: "from-accent/20 to-accent/5",
+    iconBg: "bg-accent/15 text-accent-foreground",
+    border: "border-accent/20",
+    tag: "Wellness",
+  },
+  {
+    icon: TrendingUp,
+    title: "Milestone Tracking",
+    desc: "Document your pet's growth journey with photos, weight logs, and milestone markers. Watch them grow from puppy to proud adult.",
+    gradient: "from-secondary/20 to-secondary/5",
+    iconBg: "bg-secondary/15 text-secondary",
+    border: "border-secondary/20",
+    tag: "Growth",
+  },
+  {
+    icon: BotMessageSquare,
+    title: "AI Chatbot — PetBot",
+    desc: "Got a question at 2 AM about your pet's behavior? PetBot is always available with instant, reliable answers powered by veterinary knowledge.",
+    gradient: "from-primary/15 to-primary/5",
+    iconBg: "bg-primary/15 text-primary",
+    border: "border-primary/20",
+    tag: "AI Powered",
+  },
+  {
+    icon: CalendarHeart,
+    title: "Doctor Appointment Booking",
+    desc: "Browse verified veterinarians, check availability, and book appointments with a few taps. Get confirmations and reminders automatically.",
+    gradient: "from-coral/20 to-coral/5",
+    iconBg: "bg-coral/15 text-coral",
+    border: "border-coral/20",
+    tag: "Booking",
+  },
+  {
+    icon: Stethoscope,
+    title: "Consultation Chat",
+    desc: "Have a quick question for your vet? Use secure in-app messaging to consult without needing a full appointment visit.",
+    gradient: "from-secondary/20 to-secondary/5",
+    iconBg: "bg-secondary/15 text-secondary",
+    border: "border-secondary/20",
+    tag: "Telehealth",
+  },
+  {
+    icon: Newspaper,
+    title: "Community Feed",
+    desc: "Share adorable photos, ask for advice, celebrate milestones, and connect with pet parents who understand the journey.",
+    gradient: "from-accent/20 to-accent/5",
+    iconBg: "bg-accent/15 text-accent-foreground",
+    border: "border-accent/20",
+    tag: "Social",
+  },
+  {
+    icon: Store,
+    title: "Pet Marketplace",
+    desc: "Shop from trusted pet stores for food, toys, accessories, and health products. Compare prices and read reviews from real pet owners.",
+    gradient: "from-primary/15 to-primary/5",
+    iconBg: "bg-primary/15 text-primary",
+    border: "border-primary/20",
+    tag: "Shopping",
+  },
+  {
+    icon: Wallet,
+    title: "Secure Payments",
+    desc: "Pay for vet consultations, marketplace purchases, and premium features with secure, encrypted payment processing.",
+    gradient: "from-coral/20 to-coral/5",
+    iconBg: "bg-coral/15 text-coral",
+    border: "border-coral/20",
+    tag: "Payments",
+  },
+];
 
+const FeaturesPage = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-secondary to-muted relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/5" />
-        <div className="absolute top-20 left-10 text-6xl opacity-20 float-animation text-secondary-foreground/30">
-          🐾
+    <Layout> 
+    <div>
+      <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <ScrollReveal>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6 border border-white/10">
+              Platform Features
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-4">
+              Everything Your Pet Needs,<br />
+              <span className="text-accent">All in One Place</span>
+            </h1>
+            <p className="text-white/70 max-w-2xl mx-auto text-lg">
+              From health tracking to marketplace shopping, MyPetBook brings every aspect of pet care into one seamless, beautiful platform.
+            </p>
+          </ScrollReveal>
         </div>
-        <div
-          className="absolute bottom-20 right-10 text-5xl opacity-15 float-animation text-secondary-foreground/30"
-          style={{ animationDelay: "1s" }}
-        >
-          ❤️
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h1 className="text-4xl md:text-6xl font-bold text-secondary-foreground mb-6">
-            Powerful Features for Pet Care
-          </h1>
-          <p className="text-xl text-secondary-foreground/70 max-w-3xl mx-auto mb-8">
-            Discover all the amazing features that make MyPetBook the ultimate
-            companion for pet owners, veterinarians, and pet businesses.
-          </p>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 80" fill="none" className="w-full"><path d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z" fill="hsl(210 50% 98%)" /></svg>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {features.map((feature, index) => {
-              const FeatureIcon = feature.icon;
-              return (
-                <Card
-                  key={index}
-                  className="group hover:shadow-medium transition-all duration-300 border-2 hover:border-primary/20 hover:-translate-y-1"
-                >
-                  <CardContent className="p-6">
-                    <div
-                      className={`w-12 h-12 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                    >
-                      <FeatureIcon className={`w-6 h-6 ${feature.color}`} />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                    <div className="mt-4 text-xs text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      Learn more →
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* App Preview Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Experience the App
+      <section className="section-padding">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-bold mb-4">
+                🐾 Built for modern pet parents
+              </span>
+              <h2 className="text-3xl md:text-4xl font-heading font-black text-foreground">
+                Powerful Features, <span className="text-gradient">Simplified</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                See how MyPetBook brings all these features together in a
-                beautiful, intuitive mobile experience designed specifically for
-                pet lovers.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-pet-green rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-foreground">
-                    Intuitive and user-friendly interface
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-pet-green rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-foreground">
-                    Offline capability for essential features
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-pet-green rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">✓</span>
-                  </div>
-                  <span className="text-foreground">
-                    Regular updates with new features
-                  </span>
-                </div>
-              </div>
-              <div className="mt-8">
-                <Button className="btn-paw bg-gradient-primary hover:shadow-medium">
-                  <Smartphone className="w-4 h-4 mr-2" />
-                  Download Now
-                </Button>
-              </div>
             </div>
-            <div className="flex justify-center">
-              <div className="relative w-[280px] sm:w-[320px]">
-                <div className="relative w-full aspect-[9/19] min-h-[400px]">
-                  <Image
-                    src={phoneMockup}
-                    alt="MyPetBook App Preview"
-                    fill
-                    className="object-cover shadow-strong rounded-3xl"
-                    sizes="(max-width: 640px) 280px, 320px"
-                  />
-                </div>
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-pet-orange/20 rounded-full flex items-center justify-center float-animation">
-                  🐾
-                </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((f, i) => (
+              <ScrollReveal key={f.title} delay={i * 60}>
                 <div
-                  className="absolute -bottom-4 -right-4 w-10 h-10 bg-pet-blue/20 rounded-full flex items-center justify-center float-animation"
-                  style={{ animationDelay: "1s" }}
+                  className={`group relative rounded-3xl border ${f.border} bg-gradient-to-br ${f.gradient} p-7 h-full
+                    hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 cursor-default overflow-hidden`}
                 >
-                  ❤️
+                  <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-5">
+                      <div className={`w-14 h-14 rounded-2xl ${f.iconBg} flex items-center justify-center shadow-sm
+                        group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                        <f.icon size={26} strokeWidth={1.8} />
+                      </div>
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground/60 bg-background/60 backdrop-blur-sm px-3 py-1 rounded-full">
+                        {f.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-heading font-extrabold text-foreground mb-2.5 group-hover:text-primary transition-colors duration-300">
+                      {f.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-[15px]">
+                      {f.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
+    </Layout>
   );
-}
+};
+
+export default FeaturesPage;

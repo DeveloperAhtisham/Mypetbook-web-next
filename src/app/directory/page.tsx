@@ -16,8 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
 
 const vets = [
   {
@@ -119,15 +118,15 @@ const filters = [
 type VetItem = (typeof vets)[0];
 type ShopItem = (typeof shops)[0] & { services?: string[] };
 
-export default function DirectoryPage() {
+const DirectoryPage = () => {
   const [activeTab, setActiveTab] = useState<"vets" | "shops">("vets");
   const [searchTerm, setSearchTerm] = useState("");
 
   const currentData = activeTab === "vets" ? vets : shops;
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <Layout>
+    <div>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-r from-secondary to-muted relative overflow-hidden">
@@ -394,8 +393,9 @@ export default function DirectoryPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
+    </Layout>
   );
-}
+};
+
+export default DirectoryPage;

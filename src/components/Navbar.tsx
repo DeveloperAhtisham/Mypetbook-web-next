@@ -14,7 +14,6 @@ const navLinks = [
   { label: "For Pet Shops", path: "/for-pet-shops" },
   { label: "Community", path: "/community" },
   { label: "Marketplace", path: "/marketplace" },
-  { label: "Pricing", path: "/pricing" },
   { label: "About", path: "/about" },
 ];
 
@@ -39,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src={logo} alt="MyPetBook" width={40} height={40} className="rounded-lg" />
+          <Image src={logo} alt="MyPetBook" width={56} height={56} className="rounded-lg" />
           <span className={`font-heading font-bold text-xl ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
             MyPetBook
           </span>
@@ -63,9 +62,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Link href="/auth" className={`btn-outline-primary text-sm py-2 px-5 ${!scrolled && "border-white text-white hover:bg-white hover:text-primary"}`}>
+          {/* <Link href="/auth" className={`btn-outline-primary text-sm py-2 px-5 ${!scrolled && "border-white text-white hover:bg-white hover:text-primary"}`}>
             Login
-          </Link>
+          </Link> */}
           <Link href="/auth?tab=signup" className="btn-coral text-sm py-2 px-5">
             Get Started
           </Link>

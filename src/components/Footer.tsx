@@ -6,9 +6,9 @@ import logo from "@/assets/logo.png";
 const footerLinks = {
   Platform: [
     { label: "Features", path: "/features" },
-    { label: "Marketplace", path: "/marketplace" },
+    // { label: "Marketplace", path: "/marketplace" },
     { label: "Community", path: "/community" },
-    { label: "Pricing", path: "/pricing" },
+    // { label: "Pricing", path: "/pricing" },
   ],
   "For Partners": [
     { label: "For Veterinarians", path: "/for-vets" },
@@ -18,8 +18,8 @@ const footerLinks = {
   Company: [
     { label: "About Us", path: "/about" },
     { label: "Contact", path: "/contact" },
-    { label: "Privacy Policy", path: "#" },
-    { label: "Terms of Service", path: "#" },
+    // { label: "Privacy Policy", path: "#" },
+    // { label: "Terms of Service", path: "#" },
   ],
 };
 
@@ -37,9 +37,9 @@ const Footer = () => (
             Your pet&apos;s complete digital home. Connecting pet owners, veterinarians, and pet businesses in one caring ecosystem.
           </p>
           <div className="space-y-2 text-sm text-white/60">
-            <div className="flex items-center gap-2"><Mail size={14} /> hello@mypetbook.com</div>
-            <div className="flex items-center gap-2"><Phone size={14} /> +1 (555) 123-4567</div>
-            <div className="flex items-center gap-2"><MapPin size={14} /> San Francisco, CA</div>
+            <div className="flex items-center gap-2"><Mail size={14} /> admin@mypetbook.app</div>
+            <div className="flex items-center gap-2"><Phone size={14} /> +1 (647) 228-1631</div>
+            <div className="flex items-center gap-2"><MapPin size={14} /> Onatario, Canada</div>
           </div>
         </div>
 
@@ -60,7 +60,7 @@ const Footer = () => (
       </div>
 
       {/* Newsletter */}
-      <div className="mt-14 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* <div className="mt-14 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
           <h4 className="font-heading font-bold text-lg">Stay in the loop</h4>
           <p className="text-white/60 text-sm">Get pet care tips and platform updates in your inbox.</p>
@@ -73,7 +73,7 @@ const Footer = () => (
           />
           <button className="btn-coral text-sm py-2.5">Subscribe</button>
         </div>
-      </div>
+      </div> */}
 
       <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-white/40">
         <p>© 2026 MyPetBook. All rights reserved.</p>

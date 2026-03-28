@@ -16,7 +16,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    email: "hello@mypetbook.com",
+    email: "admin@mypetbook.app",
     availableLanguage: "English",
   },
 };

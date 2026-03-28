@@ -124,7 +124,7 @@ const ForVetsPage = () => {
     </section>
 
     {/* Pricing */}
-    <section className="section-padding bg-muted/30">
+    {/* <section className="section-padding bg-muted/30">
       <div className="container mx-auto px-4">
         <ScrollReveal><h2 className="text-3xl md:text-4xl font-heading font-black text-center mb-14">Vet Plans & Pricing</h2></ScrollReveal>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -148,7 +148,7 @@ const ForVetsPage = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
   </div>
   );
 }

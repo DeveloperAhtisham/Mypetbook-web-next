@@ -88,7 +88,7 @@ const ForPetShopsPage = () => {
     </section>
 
     {/* Pricing */}
-    <section className="section-padding">
+    {/* <section className="section-padding">
       <div className="container mx-auto px-4">
         <ScrollReveal><h2 className="text-3xl md:text-4xl font-heading font-black text-center mb-14">Shop Plans & Pricing</h2></ScrollReveal>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -112,7 +112,7 @@ const ForPetShopsPage = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
   </div>
   );
 };

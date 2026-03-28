@@ -52,7 +52,7 @@ export const metadata = {
     gradient: "from-primary/15 to-primary/5",
     iconBg: "bg-primary/15 text-primary",
     border: "border-primary/20",
-    tag: "AI Powered",
+    tag: "AI Powered-Coming Soon",
   },
   {
     icon: CalendarHeart,
@@ -70,7 +70,7 @@ export const metadata = {
     gradient: "from-secondary/20 to-secondary/5",
     iconBg: "bg-secondary/15 text-secondary",
     border: "border-secondary/20",
-    tag: "Telehealth",
+    tag: "Telehealth-Coming soon",
   },
   {
     icon: Newspaper,
@@ -88,7 +88,7 @@ export const metadata = {
     gradient: "from-primary/15 to-primary/5",
     iconBg: "bg-primary/15 text-primary",
     border: "border-primary/20",
-    tag: "Shopping",
+    tag: "Shopping-Coming Soon",
   },
   {
     icon: Wallet,
@@ -97,7 +97,7 @@ export const metadata = {
     gradient: "from-coral/20 to-coral/5",
     iconBg: "bg-coral/15 text-coral",
     border: "border-coral/20",
-    tag: "Payments",
+    tag: "Payments-coming soon",
   },
 ];
 

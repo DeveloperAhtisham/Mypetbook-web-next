@@ -13,7 +13,7 @@ const navLinks = [
   { label: "For Vets", path: "/for-vets" },
   { label: "For Pet Shops", path: "/for-pet-shops" },
   { label: "Community", path: "/community" },
-  { label: "Marketplace", path: "/marketplace" },
+  // { label: "Marketplace", path: "/marketplace" },
   { label: "About", path: "/about" },
 ];
 
@@ -65,9 +65,9 @@ const Navbar = () => {
           {/* <Link href="/auth" className={`btn-outline-primary text-sm py-2 px-5 ${!scrolled && "border-white text-white hover:bg-white hover:text-primary"}`}>
             Login
           </Link> */}
-          <Link href="/auth?tab=signup" className="btn-coral text-sm py-2 px-5">
+          {/* <Link href="/auth?tab=signup" className="btn-coral text-sm py-2 px-5">
             Get Started
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Toggle */}

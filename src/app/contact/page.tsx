@@ -5,9 +5,9 @@ import { Mail, Stethoscope, Store, MapPin } from "lucide-react";
 import { useState } from "react";
 
 const contactCards = [
-  { icon: Mail, title: "General Inquiries", desc: "Questions about the platform or your account.", email: "hello@mypetbook.com" },
-  { icon: Stethoscope, title: "Vet Registration", desc: "Want to join as a veterinarian? We'll guide you.", email: "vets@mypetbook.com" },
-  { icon: Store, title: "Shop Registration", desc: "Interested in listing your pet shop? Let's talk.", email: "shops@mypetbook.com" },
+  { icon: Mail, title: "General Inquiries", desc: "Questions about the platform or your account.", email: "mypetbookcommunity@gmail.com" },
+  { icon: Stethoscope, title: "Vet Registration", desc: "Want to join as a veterinarian? We'll guide you.", email: "admin@mypetbook.app" },
+  { icon: Store, title: "Shop Registration", desc: "Interested in listing your pet shop? Let's talk.", email: "admin@mypetbook.app" },
 ];
 
 const Contact = () => {
@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <ScrollReveal>
+            {/* <ScrollReveal>
               <h2 className="text-2xl font-heading font-black mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -78,18 +78,26 @@ const Contact = () => {
                 />
                 <button type="submit" className="btn-coral w-full py-3 text-sm">Send Message</button>
                   </form>
-            </ScrollReveal>
+            </ScrollReveal> */}
 
             <ScrollReveal delay={200}>
               <h2 className="text-2xl font-heading font-black mb-6">Find Us</h2>
-              <div className="card-float h-64 flex items-center justify-center bg-muted mb-6">
-                <MapPin size={32} className="text-muted-foreground/30" />
-                <span className="text-muted-foreground text-sm ml-2">Map placeholder</span>
-                    </div>
+            <div className="card-float h-64 mb-6 overflow-hidden rounded-xl">
+  <iframe
+    src="https://www.google.com/maps?q=278+Scott+Road,+Cambridge,+ON,+Canada&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
               <div className="text-sm text-muted-foreground space-y-2">
-                <p><strong className="text-foreground">Address:</strong> 123 Pet Street, San Francisco, CA 94102</p>
-                <p><strong className="text-foreground">Phone:</strong> +1 (555) 123-4567</p>
-                <p><strong className="text-foreground">Hours:</strong> Mon-Fri, 9 AM - 6 PM PST</p>
+                <p><strong className="text-foreground">Address:</strong> 278 Scott Road, Cambridge, ON N3C 3W8, Canada</p>
+                <p><strong className="text-foreground">Phone:</strong> +1 (647) 228-1631</p>
+                <p><strong className="text-foreground">Hours:</strong> Mon–Fri, 9 AM – 6 PM ET</p>
                     </div>
             </ScrollReveal>
           </div>

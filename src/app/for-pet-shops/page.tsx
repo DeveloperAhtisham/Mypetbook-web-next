@@ -15,11 +15,11 @@ const benefits = [
   { icon: Star, title: "Trusted Reviews", desc: "Build credibility with verified customer reviews. Respond to feedback and showcase your ratings." },
 ];
 
-const plans = [
-  { name: "Starter", price: "$0", period: "/month", desc: "List your first products", features: ["Up to 20 product listings", "Basic shop profile", "Order notifications", "Customer messaging"], cta: "Start Free", highlight: false },
-  { name: "Growth", price: "$39", period: "/month", desc: "Scale your pet business", features: ["Up to 200 product listings", "Featured shop placement", "Promotion tools", "Sales analytics", "Priority support"], cta: "Start Growing", highlight: true },
-  { name: "Premium", price: "$99", period: "/month", desc: "For established pet businesses", features: ["Unlimited listings", "Premium shop branding", "Advanced analytics", "Ad credits included", "API integration", "Dedicated account manager"], cta: "Go Premium", highlight: false },
-];
+// const plans = [
+//   { name: "Starter", price: "$0", period: "/month", desc: "List your first products", features: ["Up to 20 product listings", "Basic shop profile", "Order notifications", "Customer messaging"], cta: "Start Free", highlight: false },
+//   { name: "Growth", price: "$39", period: "/month", desc: "Scale your pet business", features: ["Up to 200 product listings", "Featured shop placement", "Promotion tools", "Sales analytics", "Priority support"], cta: "Start Growing", highlight: true },
+//   { name: "Premium", price: "$99", period: "/month", desc: "For established pet businesses", features: ["Unlimited listings", "Premium shop branding", "Advanced analytics", "Ad credits included", "API integration", "Dedicated account manager"], cta: "Go Premium", highlight: false },
+// ];
 
 const ForPetShopsPage = () => {
   return (

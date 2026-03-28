@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import Link from "next/link";
 import {
   Package, ClipboardList, Percent, BarChart3, Megaphone, Star,
-  ArrowRight, Check
+  ArrowRight,
 } from "lucide-react";
 const benefits = [
   { icon: Package, title: "Product Listings", desc: "Showcase your entire inventory with beautiful product cards, categories, and detailed descriptions." },

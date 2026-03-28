@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import Link from "next/link";
 import {
   LayoutDashboard, CalendarCheck, Video, BookOpen, Star, FileText,
-  ArrowRight, Check
+  ArrowRight,
 } from "lucide-react";
 const benefits = [
   { icon: LayoutDashboard, title: "Professional Dashboard", desc: "Manage your entire practice from one clean, intuitive dashboard with patient overview, analytics, and scheduling." },

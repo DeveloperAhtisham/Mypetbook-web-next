@@ -1,7 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Mail, Stethoscope, Store, MapPin } from "lucide-react";
+import { Mail, Stethoscope, Store } from "lucide-react";
 import { useState } from "react";
 
 const contactCards = [

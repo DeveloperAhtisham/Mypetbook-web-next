@@ -2,7 +2,7 @@
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Mail, Stethoscope, Store } from "lucide-react";
-import { useState } from "react";
+//import { useState } from "react";
 
 const contactCards = [
   { icon: Mail, title: "General Inquiries", desc: "Questions about the platform or your account.", email: "mypetbookcommunity@gmail.com" },
@@ -11,13 +11,13 @@ const contactCards = [
 ];
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  // const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you! We'll get back to you soon.");
-    setForm({ name: "", email: "", subject: "", message: "" });
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   alert("Thank you! We'll get back to you soon.");
+  //   setForm({ name: "", email: "", subject: "", message: "" });
+  // };
 
   return (
     <div>

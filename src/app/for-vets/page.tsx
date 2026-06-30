@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import Link from "next/link";
 import {
   LayoutDashboard, CalendarCheck, Video, BookOpen, Star, FileText,
-  ArrowRight, Check
+  ArrowRight,
 } from "lucide-react";
 const benefits = [
   { icon: LayoutDashboard, title: "Professional Dashboard", desc: "Manage your entire practice from one clean, intuitive dashboard with patient overview, analytics, and scheduling." },
@@ -21,11 +21,11 @@ const steps = [
   { num: "3", title: "Start Practicing", desc: "Set up your dashboard, list your services, and start accepting appointments." },
 ];
 
-const plans = [
-  { name: "Free", price: "$0", period: "/month", desc: "Get started with the basics", features: ["Basic profile listing", "Up to 10 appointments/month", "Patient messaging", "Community posting"], cta: "Start Free", highlight: false },
-  { name: "Professional", price: "$49", period: "/month", desc: "Grow your digital practice", features: ["Priority profile listing", "Unlimited appointments", "Video consultations", "Analytics dashboard", "Educational content tools", "Priority support"], cta: "Go Professional", highlight: true },
-  { name: "Clinic", price: "$149", period: "/month", desc: "For multi-vet practices", features: ["Everything in Professional", "Up to 10 vet accounts", "Clinic branding", "Team management", "Advanced analytics", "API access", "Dedicated support"], cta: "Contact Sales", highlight: false },
-];
+// const plans = [
+//   { name: "Free", price: "$0", period: "/month", desc: "Get started with the basics", features: ["Basic profile listing", "Up to 10 appointments/month", "Patient messaging", "Community posting"], cta: "Start Free", highlight: false },
+//   { name: "Professional", price: "$49", period: "/month", desc: "Grow your digital practice", features: ["Priority profile listing", "Unlimited appointments", "Video consultations", "Analytics dashboard", "Educational content tools", "Priority support"], cta: "Go Professional", highlight: true },
+//   { name: "Clinic", price: "$149", period: "/month", desc: "For multi-vet practices", features: ["Everything in Professional", "Up to 10 vet accounts", "Clinic branding", "Team management", "Advanced analytics", "API access", "Dedicated support"], cta: "Contact Sales", highlight: false },
+// ];
 
 const ForVetsPage = () => {
   return (

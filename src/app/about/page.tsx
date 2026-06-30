@@ -38,12 +38,12 @@ const values = [
 ];
 
 const team = [
-  {
-    name: "Syed Mustghees Ahmad",
-    role: "Founder & CEO",
-    bio: "A passionate developer and tech innovator, Syed Mustaghees Ahmad combines his expertise in software engineering with a love for pets. With years of experience building digital solutions, he founded MyPetBook to create a seamless platform connecting pet owners, veterinarians, and pet businesses—making pet care smarter, simpler, and more accessible for everyone.",
-    initials: "MA",
-  },
+  // {
+  //   name: "Syed Mustghees Ahmad",
+  //   role: "Founder & CEO",
+  //   bio: "A passionate developer and tech innovator, Syed Mustaghees Ahmad combines his expertise in software engineering with a love for pets. With years of experience building digital solutions, he founded MyPetBook to create a seamless platform connecting pet owners, veterinarians, and pet businesses—making pet care smarter, simpler, and more accessible for everyone.",
+  //   initials: "MA",
+  // },
   {
     name: "Areej Sherazi",
     role: "Co-founder & CTO",

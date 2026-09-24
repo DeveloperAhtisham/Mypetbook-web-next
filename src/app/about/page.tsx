@@ -37,12 +37,19 @@ const values = [
   },
 ];
 
-const team = [
+const team: {
+  name: string;
+  role: string;
+  bio: string;
+  initials: string;
+  linkedin?: string;
+}[] = [
   {
     name: "Syed Mustghees Ahmad",
     role: "Founder & CEO",
     bio: "A passionate developer and tech innovator, Syed Mustaghees Ahmad combines his expertise in software engineering with a love for pets. With years of experience building digital solutions, he founded MyPetBook to create a seamless platform connecting pet owners, veterinarians, and pet businesses—making pet care smarter, simpler, and more accessible for everyone.",
     initials: "MA",
+    linkedin: "https://www.linkedin.com/in/mustgees-ahmad/",
   },
   {
     name: "Areej Sherazi",
@@ -55,12 +62,14 @@ const team = [
     role: "Co-Founder & CMO",
     bio: "Ahtisham Hanif drives growth and engagement at MyPetBook, leading marketing strategies, onboarding veterinarians, and coordinating the frontend development. With a background as a senior engineer in health tech, he combines technical insight with creative leadership to ensure the platform reaches and delights its users.",
     initials: "AH",
+    linkedin: "https://www.linkedin.com/in/ahtisham-hanif/",
   },
   {
     name: "Ahsan Ghaffar",
     role: "Co-Founder & CDO",
     bio: "Ahsan Ghaffar leads the design of MyPetBook, shaping every feature and interaction to be intuitive and visually engaging. As an award-winning product designer, he believes that beautiful, thoughtful design makes pet care more approachable, enjoyable, and seamless for users.",
     initials: "AG",
+    linkedin: "https://www.linkedin.com/in/ahsanghaffar/",
   },
 ];
 
@@ -194,10 +203,24 @@ const AboutPage = () => {
                     {t.bio}
                   </p>
                   <div className="flex justify-center gap-2 mt-3">
-                    <Linkedin
-                      size={16}
-                      className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
-                    />
+                    {t.linkedin ? (
+                      <a
+                        href={t.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${t.name} on LinkedIn`}
+                      >
+                        <Linkedin
+                          size={16}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        />
+                      </a>
+                    ) : (
+                      <Linkedin
+                        size={16}
+                        className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"
+                      />
+                    )}
                     <Twitter
                       size={16}
                       className="text-muted-foreground hover:text-primary cursor-pointer transition-colors"

@@ -56,6 +56,7 @@ const team: {
     role: "Co-founder & CTO",
     bio: "Areej Sherazi leads the technical vision of MyPetBook, overseeing product development, backend architecture, and platform deployments. With a passion for building scalable and reliable systems, she ensures the technology powering our ecosystem is robust, efficient, and ready to grow with the community.",
     initials: "AS",
+    linkedin: "https://www.linkedin.com/in/areej-sherazi/",
   },
   {
     name: "Ahtisham Hanif",

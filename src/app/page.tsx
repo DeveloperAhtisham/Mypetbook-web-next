@@ -2,6 +2,8 @@
 
 import { ScrollReveal, useCountUp } from "@/components/ScrollReveal";
 import Link from "next/link";
+import { DOWNLOAD_SECTION_ID } from "@/lib/appLinks";
+import { useStoreLinks } from "@/hooks/use-store-links";
 import {
   Heart,
   ShoppingBag,
@@ -163,6 +165,8 @@ export default function HomePage() {
     "owners",
   );
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { appStoreUrl, playStoreUrl, installUrl, installOpensNewTab } =
+    useStoreLinks();
 
   return (
     <div>
@@ -214,9 +218,11 @@ export default function HomePage() {
                   <ArrowRight size={18} className="inline ml-1" />
                 </Link> */}
                  <a
-              href="https://play.google.com/store/apps/details?id=com.mypetbook.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={installUrl}
+              {...(installOpensNewTab && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className="btn-coral text-lg py-3.5 px-10 inline-block"
             >
               Install MyPetBook Now!{" "}
@@ -543,7 +549,10 @@ export default function HomePage() {
       </section>
 
       {/* App Download CTA */}
-      <section className="gradient-hero py-20 relative overflow-hidden">
+      <section
+        id={DOWNLOAD_SECTION_ID}
+        className="scroll-mt-20 gradient-hero py-20 relative overflow-hidden"
+      >
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white mb-4">
@@ -551,15 +560,25 @@ export default function HomePage() {
             </h2>
             <p className="text-white/70 mb-8 max-w-lg mx-auto">
               Download the app to manage your pet&apos;s world on the go.
-              Available soon on iOS and Android.
+              Available now on iOS and Android.
             </p>
-            <div className="flex gap-4 justify-center">
-              <button className="bg-white/10 border border-white/20 rounded-xl px-6 py-3 text-white font-heading font-bold text-sm hover:bg-white/20 transition-all">
-                📱 App Store — Coming Soon
-              </button>
-              <button className="bg-white/10 border border-white/20 rounded-xl px-6 py-3 text-white font-heading font-bold text-sm hover:bg-white/20 transition-all">
-                🤖 Google Play — Coming Soon
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 border border-white/20 rounded-xl px-6 py-3 text-white font-heading font-bold text-sm hover:bg-white/20 transition-all"
+              >
+                📱 Download on the App Store
+              </a>
+              <a
+                href={playStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 border border-white/20 rounded-xl px-6 py-3 text-white font-heading font-bold text-sm hover:bg-white/20 transition-all"
+              >
+                🤖 Get it on Google Play
+              </a>
             </div>
           </ScrollReveal>
         </div>
@@ -621,9 +640,11 @@ export default function HomePage() {
               Get Started Free <ArrowRight size={18} className="inline ml-1" />
             </Link>   */}
             <a
-              href="https://play.google.com/store/apps/details?id=com.mypetbook.app"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={installUrl}
+              {...(installOpensNewTab && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className="btn-coral text-lg py-3.5 px-10 inline-block"
             >
               Install MyPetBook Now!{" "}

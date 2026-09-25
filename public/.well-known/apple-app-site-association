@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "FDB8ZW6M38.com.mypetbook.app",
+        "paths": ["/post/*"]
+      }
+    ]
+  }
+}

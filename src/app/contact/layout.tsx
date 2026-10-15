@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { pageCanonical } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us – Support, Vets & Shop Partners",
   description:
-    "Get in touch with MyPetBook. General inquiries, vet registration, and pet shop partnership – we'd love to hear from you.",
+    "Get in touch with MyPetBook. General inquiries, vet registration, and pet shop partnership – we would love to hear from you.",
+  alternates: { canonical: pageCanonical("/contact") },
   openGraph: {
     title: "Contact Us | MyPetBook",
     description:

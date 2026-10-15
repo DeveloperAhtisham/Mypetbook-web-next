@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Calendar,
   User,
@@ -9,11 +10,13 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { pageCanonical } from "@/lib/seo";
 
-export const metadata = {
-  title: "Blog",
+export const metadata: Metadata = {
+  title: "Pet Care Blog – Tips from Experts",
   description:
     "Expert advice, tips, and insights from veterinary professionals to help you provide the best care for your beloved pets.",
+  alternates: { canonical: pageCanonical("/blog") },
 };
 
 const blogPosts = [

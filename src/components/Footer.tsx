@@ -6,9 +6,9 @@ import logo from "@/assets/logo.png";
 const footerLinks = {
   Platform: [
     { label: "Features", path: "/features" },
-    // { label: "Marketplace", path: "/marketplace" },
     { label: "Community", path: "/community" },
-    // { label: "Pricing", path: "/pricing" },
+    { label: "Directory", path: "/directory" },
+    { label: "Blog", path: "/blog" },
   ],
   "For Partners": [
     { label: "For Veterinarians", path: "/for-vets" },
@@ -18,8 +18,9 @@ const footerLinks = {
   Company: [
     { label: "About Us", path: "/about" },
     { label: "Contact", path: "/contact" },
-    // { label: "Privacy Policy", path: "#" },
-    // { label: "Terms of Service", path: "#" },
+    { label: "Privacy Policy", path: "/privacy" },
+    { label: "Terms of Service", path: "/terms" },
+    { label: "Sitemap", path: "/sitemap.xml" },
   ],
 };
 
@@ -37,9 +38,13 @@ const Footer = () => (
             Your pet&apos;s complete digital home. Connecting pet owners, veterinarians, and pet businesses in one caring ecosystem.
           </p>
           <div className="space-y-2 text-sm text-white/60">
-            <div className="flex items-center gap-2"><Mail size={14} /> admin@mypetbook.app</div>
-            <div className="flex items-center gap-2"><Phone size={14} /> +1 (647) 228-1631</div>
-            <div className="flex items-center gap-2"><MapPin size={14} /> Onatario, Canada</div>
+            <a href="mailto:admin@mypetbook.app" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Mail size={14} /> admin@mypetbook.app
+            </a>
+            <a href="tel:+16472281631" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Phone size={14} /> +1 (647) 228-1631
+            </a>
+            <div className="flex items-center gap-2"><MapPin size={14} /> Ontario, Canada</div>
           </div>
         </div>
 

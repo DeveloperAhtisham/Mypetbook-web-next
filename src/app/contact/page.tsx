@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { PageBreadcrumbs } from "@/components/PageBreadcrumbs";
 import { Mail, Stethoscope, Store } from "lucide-react";
 //import { useState } from "react";
 
@@ -23,6 +24,7 @@ const Contact = () => {
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
+          <PageBreadcrumbs items={[{ label: "Contact" }]} />
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-4">
               Get in <span className="text-accent">Touch</span>
@@ -96,7 +98,12 @@ const Contact = () => {
 
               <div className="text-sm text-muted-foreground space-y-2">
                 <p><strong className="text-foreground">Address:</strong> 278 Scott Road, Cambridge, ON N3C 3W8, Canada</p>
-                <p><strong className="text-foreground">Phone:</strong> +1 (647) 228-1631</p>
+                <p>
+                  <strong className="text-foreground">Phone:</strong>{" "}
+                  <a href="tel:+16472281631" className="hover:text-secondary transition-colors">
+                    +1 (647) 228-1631
+                  </a>
+                </p>
                 <p><strong className="text-foreground">Hours:</strong> Mon–Fri, 9 AM – 6 PM ET</p>
                     </div>
             </ScrollReveal>

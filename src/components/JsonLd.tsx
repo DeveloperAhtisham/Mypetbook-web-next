@@ -46,6 +46,39 @@ const websiteSchema = {
   },
 };
 
+const foundersSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MyPetBook",
+  url: siteUrl,
+  founder: [
+    {
+      "@type": "Person",
+      name: "Syed Mustghees Ahmad",
+      jobTitle: "Founder & CEO",
+      sameAs: ["https://www.linkedin.com/in/mustgees-ahmad/"],
+    },
+    {
+      "@type": "Person",
+      name: "Areej Sherazi",
+      jobTitle: "Co-founder & CTO",
+      sameAs: ["https://www.linkedin.com/in/areej-sherazi/"],
+    },
+    {
+      "@type": "Person",
+      name: "Ahtisham Hanif",
+      jobTitle: "Co-Founder & CMO",
+      sameAs: ["https://www.linkedin.com/in/ahtisham-hanif/"],
+    },
+    {
+      "@type": "Person",
+      name: "Ahsan Ghaffar",
+      jobTitle: "Co-Founder & CDO",
+      sameAs: ["https://www.linkedin.com/in/ahsanghaffar/"],
+    },
+  ],
+};
+
 export function JsonLd() {
   return (
     <>
@@ -59,6 +92,12 @@ export function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(foundersSchema),
         }}
       />
     </>

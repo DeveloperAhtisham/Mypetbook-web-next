@@ -32,6 +32,10 @@ function AuthContent() {
               <span className="font-heading font-bold text-xl text-primary">MyPetBook</span>
             </Link>
 
+            <h1 className="text-2xl font-heading font-black text-foreground mb-6">
+              {tab === "login" ? "Log in to MyPetBook" : "Create your MyPetBook account"}
+            </h1>
+
             {/* Tabs */}
             <div className="flex gap-1 bg-muted rounded-full p-1 mb-8">
               <button

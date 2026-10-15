@@ -1,10 +1,7 @@
+import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
-
-export const metadata = {
-  title: "About",
-  description:
-    "Learn about MyPetBook – our mission to connect pet owners, veterinarians, and pet businesses.",
-};
+import { PageBreadcrumbs } from "@/components/PageBreadcrumbs";
+import { pageCanonical } from "@/lib/seo";
 import {
   Heart,
   Shield,
@@ -13,6 +10,19 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About MyPetBook – Pet Care Platform Founders & Mission",
+  description:
+    "Learn about MyPetBook, the pet health and community app connecting pet owners, veterinarians, and pet shops. Meet our founders and our mission for smarter pet care.",
+  keywords: [
+    "pet care platform",
+    "pet health app",
+    "pet community app",
+    "MyPetBook team",
+  ],
+  alternates: { canonical: pageCanonical("/about") },
+};
 
 const values = [
   {
@@ -115,6 +125,7 @@ const AboutPage = () => {
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
+          <PageBreadcrumbs items={[{ label: "About" }]} />
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-4">
               About <span className="text-accent">MyPetBook</span>

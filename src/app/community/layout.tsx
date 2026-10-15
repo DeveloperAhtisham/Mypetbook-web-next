@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import { pageCanonical } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Community",
+  title: "Pet Community App – Share Tips, Stories & Advice",
   description:
-    "Join the MyPetBook community. Share moments, get advice, and connect with pet lovers and experts worldwide.",
+    "Join the MyPetBook pet community app. Share pet stories, get care advice from owners and experts, and connect with dog and cat lovers worldwide.",
+  keywords: [
+    "pet community app",
+    "pet owner community",
+    "dog and cat care tips",
+    "pet care platform",
+    "pet lovers network",
+  ],
+  alternates: { canonical: pageCanonical("/community") },
   openGraph: {
     title: "Community | MyPetBook",
     description:

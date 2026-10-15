@@ -3,6 +3,8 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Check, Shield, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { pricingFaqs as faqs } from "@/lib/seo";
+import { PageBreadcrumbs } from "@/components/PageBreadcrumbs";
 
 const ownerPlans = [
   { name: "Free", price: "$0", period: "/month", desc: "Perfect for getting started", features: ["1 pet profile", "Basic health tracking", "Community access", "Marketplace browsing", "Basic vet search"], cta: "Get Started Free", highlight: false },
@@ -22,13 +24,6 @@ const shopPlans = [
   { name: "Premium", price: "$99", period: "/month", features: ["Unlimited listings", "Premium branding", "Advanced analytics", "Ad credits", "API integration"], cta: "Go Premium", highlight: false },
 ];
 
-const faqs = [
-  { q: "Can I cancel my subscription anytime?", a: "Yes! All paid plans are month-to-month with no long-term commitment. Cancel anytime from your account settings." },
-  { q: "Is there a free trial for paid plans?", a: "We offer a 14-day free trial on all paid plans so you can explore the full feature set before committing." },
-  { q: "What payment methods do you accept?", a: "We accept all major credit cards, PayPal, and Apple Pay. All transactions are secured with bank-level encryption." },
-  { q: "Can I switch plans later?", a: "Absolutely. You can upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle." },
-];
-
 const PricingPage = () => {
   const [tab, setTab] = useState<"owners" | "vets" | "shops">("owners");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,6 +34,7 @@ const PricingPage = () => {
     <div>
       <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
+          <PageBreadcrumbs items={[{ label: "Pricing" }]} />
           <ScrollReveal>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-4">
               Simple, Transparent <span className="text-accent">Pricing</span>

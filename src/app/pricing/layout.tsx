@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
+import { FaqJsonLd } from "@/components/FaqJsonLd";
+import { pageCanonical, pricingFaqs } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "Pet App Pricing – Free Plans for Owners, Vets & Shops",
   description:
-    "Plans for pet owners, veterinarians, and pet shops. Free tier available. Transparent pricing with no hidden fees.",
+    "Transparent MyPetBook pricing for the best pet health app experience. Free tier for pet owners, plus professional plans for veterinarians and pet shops—no hidden fees.",
+  keywords: [
+    "pet health app pricing",
+    "free pet care app",
+    "vet practice software pricing",
+    "pet shop marketplace plans",
+  ],
+  alternates: { canonical: pageCanonical("/pricing") },
   openGraph: {
     title: "Pricing | MyPetBook",
     description:
@@ -16,5 +25,10 @@ export default function PricingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <FaqJsonLd faqs={pricingFaqs} />
+      {children}
+    </>
+  );
 }

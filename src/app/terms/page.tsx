@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { PageBreadcrumbs } from "@/components/PageBreadcrumbs";
+import { pageCanonical } from "@/lib/seo";
+
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "MyPetBook terms of service and usage guidelines.",
+  description: "MyPetBook terms of service and usage guidelines for pet owners, vets, and shops.",
+  alternates: { canonical: pageCanonical("/terms") },
 };
 
 const TermsPage = () => {
@@ -10,6 +14,7 @@ const TermsPage = () => {
     <div>
         <section className="gradient-hero pt-32 pb-24 relative overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
+          <PageBreadcrumbs items={[{ label: "Terms of Service" }]} />
           <ScrollReveal>
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6 border border-white/10">
               Terms of Service
